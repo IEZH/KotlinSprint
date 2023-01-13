@@ -1,5 +1,5 @@
 package lesson_2
 
 fun main() {
-    println("это решение к первой задаче")
+    println("это реальное решение")
 }

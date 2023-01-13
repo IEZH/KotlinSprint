@@ -1,13 +1,12 @@
 package lesson_1
 
 fun main () {
-    val yearOfFlight = 1961
-    var hourOfFlight = "09"
-    var minuteOfFlight = "07"
-    hourOfFlight = "10"
-    minuteOfFlight = "55"
+    val numberOfSeconds = 6480
+    val minutes = 60
+    val numberOfMinutes = numberOfSeconds / minutes
 
-    println(yearOfFlight)
-    println(hourOfFlight)
-    println(minuteOfFlight)
+    print(numberOfMinutes)
+    print(":")
+    print("00")
+
 }
