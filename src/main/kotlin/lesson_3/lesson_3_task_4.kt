@@ -5,11 +5,11 @@ fun main() {
     var where = "E4"
     var stepNumber = 1
 
-    println("$whereFrom $where $stepNumber")
+    println("$whereFrom-$where;$stepNumber")
 
     whereFrom = "D2"
     where = "D4"
     stepNumber = 2
 
-    println("$whereFrom $where $stepNumber")
+    println("$whereFrom-$where;$stepNumber")
 }
