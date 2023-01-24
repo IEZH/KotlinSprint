@@ -8,7 +8,7 @@ fun main() {
     println("$whereFrom-$where;$stepNumber")
 
     whereFrom = "D2"
-    where = "D4"
+    where = "D3"
     stepNumber = 2
 
     println("$whereFrom-$where;$stepNumber")
