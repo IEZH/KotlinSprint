@@ -1,14 +1,15 @@
 package lesson_4
 
 fun main() {
-    val sunnyWeather = true
-    val openTent = true
-    val humidity20 = true
-    val seasonNotWinter = false
+    val Weather = "sunny"
+    val Tent = "open"
+    val humidity = 20
+    val season = "winter"
 
-    println("Благоприятные ли условия сейчас для роста бобовых?" + (sunnyWeather == SUNNY_WEATHER && openTent == OPEN_TENT && humidity20 == HUMIDITY_20 && seasonNotWinter == SEASON_NOT_WINTER))
+    println("Благоприятные ли условия сейчас для роста бобовых?" + (Weather == PERFECT_WEATHER && Tent == PERFECT_TENT && humidity == PERFECT_HUMIDITY && season != PERFECT_SEASON))
 }
-const val SUNNY_WEATHER = true
-const val OPEN_TENT = true
-const val HUMIDITY_20 = true
-const val SEASON_NOT_WINTER = true
+
+const val PERFECT_WEATHER = "sunny"
+const val PERFECT_TENT = "open"
+const val PERFECT_HUMIDITY = 20
+const val PERFECT_SEASON = "winter"
