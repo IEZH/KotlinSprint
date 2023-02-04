@@ -13,9 +13,9 @@ fun main() {
     println("Текущее количество ящиков провизии: ")
     val provisions = readLine()!!.toInt()
 
-    val resultText = if ((shipDamage == false) && (favorableWeather == true || false) && (teamSize >= MIN_TEAM_SIZE && teamSize < MAX_TEAM_SIZE)
+    val resultText = if ((!shipDamage) && (favorableWeather == true || false) && (teamSize >= MIN_TEAM_SIZE && teamSize < MAX_TEAM_SIZE)
         && (provisions > MIN_PROVISIONS)) "Корабль может отправляться"
-     else if ((shipDamage == true) && (teamSize == MAX_TEAM_SIZE) && (favorableWeather == true) && (provisions > MIN_PROVISIONS))
+     else if ((shipDamage) && (teamSize == MAX_TEAM_SIZE) && (favorableWeather) && (provisions > MIN_PROVISIONS))
         "Корабль может отправляться" else "Корабль не может отправляться"
 
     println(resultText)
