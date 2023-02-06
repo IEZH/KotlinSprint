@@ -15,4 +15,6 @@ fun main() {
     else if ((numberOne == winningNumberOne || numberOne == winningNumberTwo) || (numberTwo == winningNumberTwo || numberTwo == winningNumberOne))
         println("Вы выиграли утешительный приз!")
     else println("Неудача! Крутите барабан!")
+
+    println("выигрышные цифры: $winningNumberOne и $winningNumberTwo")
 }
