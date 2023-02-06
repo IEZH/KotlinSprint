@@ -8,10 +8,9 @@ fun main() {
     println("Введите свой логин:")
     val inputLog = readLine()
 
-    if (inputLog != log1)
+    if (inputLog != log1) {
         println("Такого логина не существет. Пройдите регистрацию")
-    if (inputLog != log1)
-        return
+        return }
 
     println("Введите пароль:")
     val inputPass = readLine()
