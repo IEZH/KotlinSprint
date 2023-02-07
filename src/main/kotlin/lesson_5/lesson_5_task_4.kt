@@ -10,7 +10,8 @@ fun main() {
 
     if (inputLog != log1) {
         println("Такого логина не существет. Пройдите регистрацию")
-        return }
+        return
+    }
 
     println("Введите пароль:")
     val inputPass = readLine()
@@ -18,6 +19,5 @@ fun main() {
     if (inputPass == pass1)
         println("Добро пожаловать, $log1")
     else println("Ошибка авторизации. Неверный пароль.")
-
 }
 
