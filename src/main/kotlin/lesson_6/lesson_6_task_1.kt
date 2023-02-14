@@ -1,16 +1,16 @@
 package lesson_6
 
 fun main() {
-    println("""Регистрация
-        |Создайте логин:""".trimMargin())
+    println("Регистрация \n" +
+            "Создайте логин:")
     val creatingLogin = readLine()
 
     println("Придумайте пароль:")
     val creatingPassword = readLine()
 
-    println("""Поздравляем! Регистрация прошла успешно. 
-        |Вход в приложение 
-        |Введите логин:""".trimMargin())
+    println("Поздравляем! Регистрация прошла успешно. \n" +
+            "Вход в приложение \n" +
+            "Введите логин:")
 
     val login = readLine()
 
