@@ -1,7 +1,7 @@
 package lesson_8
 
 fun main() {
-    var recipe = arrayOf("грибы", "курица", "сливки", "масло", "соль", "перец", "лук", "зелень")
+    val recipe = arrayOf("грибы", "курица", "сливки", "масло", "соль", "перец", "лук", "зелень")
     for (i in recipe) {
     println("Ингредиент ${recipe.indexOf(i)}: $i")
     }
