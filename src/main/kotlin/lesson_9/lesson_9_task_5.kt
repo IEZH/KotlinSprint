@@ -14,6 +14,6 @@ fun main() {
     listOsIngredientsWithoutDouble[0] = listOsIngredientsWithoutDouble[0].replaceFirstChar { it.titlecase() }
     listOsIngredientsWithoutDouble[4] = listOsIngredientsWithoutDouble[4].plus(".")
 
-    println(listOsIngredientsWithoutDouble)
+    println(listOsIngredientsWithoutDouble.joinToString())
 }
 
