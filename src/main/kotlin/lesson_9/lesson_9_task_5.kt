@@ -11,8 +11,8 @@ fun main() {
 
     val listOsIngredientsWithoutDouble = listOsIngredients.toSet().sorted().toMutableList()
 
-    listOsIngredientsWithoutDouble[0].replaceFirstChar { it.titlecase() }
     listOsIngredientsWithoutDouble[0] = listOsIngredientsWithoutDouble[0].replaceFirstChar { it.titlecase() }
+    listOsIngredientsWithoutDouble[4] = listOsIngredientsWithoutDouble[4].plus(".")
 
     println(listOsIngredientsWithoutDouble)
 }
