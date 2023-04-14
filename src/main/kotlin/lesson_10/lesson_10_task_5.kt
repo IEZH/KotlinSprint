@@ -37,21 +37,20 @@ fun confirmationCode() {
 
 fun authorization(creatingLogin: String, password: String)  {
     do {
-        println("Авторизация. \n" +
-                "Введите логин:")
+        println("Авторизация.\nВведите логин:")
         val login = readln()
 
         println("Введите пароль:")
         val inputPassword: String = readln()
         if (login != creatingLogin || inputPassword != password)
             println("Неверное имя пользователя или пароль. Повторите попытку")
-    } while (login == creatingLogin && inputPassword == password)
+    } while (login != creatingLogin || inputPassword != password)
 }
 
 fun main() {
-    registrationLogin()
-    registrationPass()
-    authorization()
+    val returnFromRegistrationLoginFun = registrationLogin()
+    val returnFromRegistrationPassFun = registrationPass()
+    authorization(creatingLogin = returnFromRegistrationLoginFun, password = returnFromRegistrationPassFun)
     confirmationCode()
 }
 
