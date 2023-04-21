@@ -11,18 +11,18 @@ fun registrationLogin(): String {
 }
 
 fun registrationPass(): String {
-    val creatingPass = StringBuilder()
+    val gettingPass = StringBuilder()
     for (i in 1..3) {
         val a = (0..9).random()
         val b = ('a'..'z').random()
         val c = ('A'..'Z').random()
-        creatingPass.append(a)
-        creatingPass.append(b)
-        creatingPass.append(c)
+        gettingPass.append(a)
+        gettingPass.append(b)
+        gettingPass.append(c)
     }
-    val password = creatingPass.toString()
-    println("Ваш пароль: $password")
-    return password
+    val createdPassword = gettingPass.toString()
+    println("Ваш пароль: $createdPassword")
+    return createdPassword
 }
 
 fun confirmationCode() {
@@ -35,22 +35,22 @@ fun confirmationCode() {
     println("Поздравляем, авторизация прошлла успешно!")
 }
 
-fun authorization(creatingLogin: String, password: String)  {
+fun authorization(creatingLogin: String, createdPassword: String)  {
     do {
         println("Авторизация.\nВведите логин:")
-        val login = readln()
+        val inputLogin = readln()
 
         println("Введите пароль:")
         val inputPassword: String = readln()
-        if (login != creatingLogin || inputPassword != password)
+        if (inputLogin != creatingLogin || inputPassword != createdPassword)
             println("Неверное имя пользователя или пароль. Повторите попытку")
-    } while (login != creatingLogin || inputPassword != password)
+    } while (inputLogin != creatingLogin || inputPassword != createdPassword)
 }
 
 fun main() {
     val returnFromRegistrationLoginFun = registrationLogin()
     val returnFromRegistrationPassFun = registrationPass()
-    authorization(creatingLogin = returnFromRegistrationLoginFun, password = returnFromRegistrationPassFun)
+    authorization(creatingLogin = returnFromRegistrationLoginFun, createdPassword = returnFromRegistrationPassFun)
     confirmationCode()
 }
 
