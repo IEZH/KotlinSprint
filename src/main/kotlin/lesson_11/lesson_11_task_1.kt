@@ -1,5 +1,12 @@
 package lesson_11
+class User(
+    val id: Int,
+    val login: String,
+    val password: String,
+    val mail: String,
+) {
 
+}
 fun main() {
     val user1 = User(
         id = 1,
