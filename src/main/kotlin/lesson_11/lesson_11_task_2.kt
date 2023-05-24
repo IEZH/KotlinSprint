@@ -55,6 +55,6 @@ fun main() {
 
     user1.outputUserInformation()
 
-    user1.sendText("привет медвед")
+    user1.sendText("привет медвед!")
 
 }
