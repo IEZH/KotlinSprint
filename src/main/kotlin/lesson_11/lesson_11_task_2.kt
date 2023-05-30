@@ -44,7 +44,6 @@ fun main() {
             login = "Cat",
             password = "mymymy",
             mail = "cat@mail.ru",
-            bio = ""
         )
 
     user1.outputUserInformation()
