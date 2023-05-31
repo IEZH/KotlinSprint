@@ -11,18 +11,17 @@ fun registrationLogin(): String {
 }
 
 fun registrationPass(): String {
-    val gettingPass = StringBuilder()
-    for (i in 1..3) {
-        val a = (0..9).random()
-        val b = ('a'..'z').random()
-        val c = ('A'..'Z').random()
-        gettingPass.append(a)
-        gettingPass.append(b)
-        gettingPass.append(c)
+    var password = ""
+
+    for (i in 0 until 8) {
+        when ((0..2).random()) {
+            0 -> password += (0..9).random()
+            1 -> password += ('a'..'z').random()
+            else -> password += ('A'..'Z').random()
+        }
     }
-    val createdPassword = gettingPass.toString()
-    println("Ваш пароль: $createdPassword")
-    return createdPassword
+    println("Ваш пароль: $password")
+    return password
 }
 
 fun confirmationCode() {
@@ -41,7 +40,7 @@ fun authorization(creatingLogin: String, createdPassword: String)  {
         val inputLogin = readln()
 
         println("Введите пароль:")
-        val inputPassword: String = readln()
+        val inputPassword = readln()
         if (inputLogin != creatingLogin || inputPassword != createdPassword)
             println("Неверное имя пользователя или пароль. Повторите попытку")
     } while (inputLogin != creatingLogin || inputPassword != createdPassword)
