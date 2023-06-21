@@ -14,12 +14,9 @@ fun registrationPass(): String {
     var password = ""
 
     for (i in 0 until 8) {
-        when ((0..2).random()) {
-            0 -> password += (0..9).random()
-            1 -> password += ('a'..'z').random()
-            else -> password += ('A'..'Z').random()
+        val range = ('!'..'9').random()
+        password += range
         }
-    }
     println("Ваш пароль: $password")
     return password
 }
@@ -47,9 +44,9 @@ fun authorization(creatingLogin: String, createdPassword: String)  {
 }
 
 fun main() {
-    val returnFromRegistrationLoginFun = registrationLogin()
-    val returnFromRegistrationPassFun = registrationPass()
-    authorization(creatingLogin = returnFromRegistrationLoginFun, createdPassword = returnFromRegistrationPassFun)
+    val login = registrationLogin()
+    val pass = registrationPass()
+    authorization(creatingLogin = login, createdPassword = pass)
     confirmationCode()
 }
 
