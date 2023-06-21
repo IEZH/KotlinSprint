@@ -9,11 +9,7 @@ class UserX(
 ) {
 
     fun outputUserInformation() {
-        println(id)
-        println(login)
-        println(password)
-        println(mail)
-        println(bio)
+        println("User: $id $login $password $mail $bio")
     }
 
     fun recordInformationAboutYourself() {
@@ -28,7 +24,7 @@ class UserX(
             println("Создайте новый пароль:")
             password = readln()
             println("Пароль изменен на $password")
-        } else return
+        } else changePassword()
 
     }
 
