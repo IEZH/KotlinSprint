@@ -1,6 +1,9 @@
 package lesson_12
 
-class WeatherY(val numberOfDay: Int, val temperatureOfDay: Int, val temperatureOfNight: Int, val atmosphericPressure: Int,
+class WeatherY(val numberOfDay: Int,
+               val temperatureOfDay: Int,
+               val temperatureOfNight: Int,
+               val atmosphericPressure: Int,
                val rain: Boolean = false) {
 
     fun displayWeather() {
