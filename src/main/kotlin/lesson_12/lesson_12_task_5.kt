@@ -37,15 +37,12 @@ fun main() {
         weatherList.add(weather)
     }
 
-    var sumTemperatureOfDay = 0
-    var sumTemperatureOfNight = 0
-    var sumAtmosphericPressure = 0
     var rainyDays = 0
 
     for (weather in weatherList) {
-        sumTemperatureOfDay += weather.temperatureOfDay
-        sumTemperatureOfNight += weather.temperatureOfNight
-        sumAtmosphericPressure += weather.atmosphericPressure
+        weather.temperatureOfDay
+        weather.temperatureOfNight
+        weather.atmosphericPressure
         if (weather.isRain) {
             rainyDays++
         }
@@ -53,9 +50,9 @@ fun main() {
         println()
     }
 
-    val averageTemperatureOfDay = sumTemperatureOfDay / weatherList.size
-    val averageTemperatureOfNight = sumTemperatureOfNight / weatherList.size
-    val averageAtmosphericPressure = sumAtmosphericPressure / weatherList.size
+    val averageTemperatureOfDay = weatherList.map { it.temperatureOfDay }.average()
+    val averageTemperatureOfNight = weatherList.map { it.temperatureOfNight }.average()
+    val averageAtmosphericPressure = weatherList.map { it.atmosphericPressure }.average()
 
     println("Средняя температура днем: $averageTemperatureOfDay")
     println("Средняя температура ночью: $averageTemperatureOfNight")
