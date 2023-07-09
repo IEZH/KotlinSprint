@@ -19,8 +19,6 @@ fun main() {
 
 fun printContacts(list: MutableList<ContactY>){
     list.forEach{
-        println(it.name)
-        println(it.numberPhone)
-        println("${it.company ?: "[не указано]"} \n")
+        println("${it.name} \n ${it.numberPhone} \n ${it.company ?: "[не указано]"} \n")
     }
 }
